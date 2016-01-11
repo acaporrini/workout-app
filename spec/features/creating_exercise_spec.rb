@@ -14,7 +14,7 @@ RSpec.feature "Creating Exercise" do
 
     fill_in "Duration", with: 70
     fill_in "Workout Details", with: "Weight lifting"
-    fill_in "workout-date", with: "2016-01-07"
+    fill_in "workout-date", with: Time.now
     click_button "Create Exercise"
 
     expect(page).to have_content('Exercise has been created')
