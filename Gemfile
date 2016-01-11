@@ -43,6 +43,8 @@ group :development, :test do
   gem 'spring'
   gem 'sqlite3'
   gem 'rspec-rails', '3.2.3'
+  gem 'guard-rspec', require: false
+  gem 'spring-commands-rspec'
 end
 group :test do
   gem 'capybara', '2.4.4'
