@@ -13,11 +13,18 @@ Rails.application.routes.draw do
     resources :exercises
   end
 
+  # resources :exercises do
+  #   collection do
+  #     post :search, to: 'dashboard#search'
+  #   end
+  # end
   resources :dashboard, only: [:index] do
     collection do
       post :search, to: 'dashboard#search'
     end
   end
+
+  resources :friendships, only: [:show, :create, :destroy]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
